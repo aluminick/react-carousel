@@ -1,28 +1,87 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, {useRef} from 'react';
 import './App.css';
+import Carousel, {
+  ItemsContainer,
+  Item,
+  Prev,
+  Next,
+} from './components/carousel'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+const App = () => {
+  const sliderContainerEl = useRef(null)
+  return (
+    <div className="App">
+      Slider
+      <div
+        ref={sliderContainerEl}
+        className="my-container">
+        <Carousel
+          container={sliderContainerEl}
+          uniqueId='foobar'
+          itemSpacing={10}
+          className="my-class">
+          <Prev />
+          <ItemsContainer>
+            <Item>
+              <span>Item</span>
+            </Item>
+            <Item>
+              <span>Item</span>
+            </Item>
+            <Item>
+              <span>Item</span>
+            </Item>
+            <Item>
+              <span>Item4</span>
+            </Item>
+            <Item>
+              <span>Item5</span>
+            </Item>
+            <Item>
+              <span>Item6</span>
+            </Item>
+            <Item>
+              <span>Item7</span>
+            </Item>
+            <Item>
+              <span>Item8</span>
+            </Item>
+            <Item>
+              <span>Item9</span>
+            </Item>
+            <Item>
+              <span>Item10</span>
+            </Item>
+            <Item>
+              <span>Item11</span>
+            </Item>
+            <Item>
+              <span>Item12</span>
+            </Item>
+            <Item>
+              <span>Item13</span>
+            </Item>
+            <Item>
+              <span>Item14</span>
+            </Item>
+            <Item>
+              <span>Item15</span>
+            </Item>
+            <Item>
+              <span>Item16</span>
+            </Item>
+            <Item>
+              <span>Item17</span>
+            </Item>
+            <Item>
+              <span>Item18</span>
+            </Item>
+          </ItemsContainer>
+          <Next />
+        </Carousel>
       </div>
-    );
-  }
+    </div>
+  )
 }
 
 export default App;

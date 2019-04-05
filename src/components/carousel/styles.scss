@@ -1,0 +1,28 @@
+.wtp-csel {
+  position: relative;
+  .wtp-csel-itemc {
+    overflow: hidden;
+  }
+  .wtp-csel-mc {
+    position: relative;
+    display: flex;
+    & > * {
+      display: inline-block;
+    }
+    .wtp-csel-item {
+      box-sizing: border-box;
+    }
+  }
+  .wtp-csel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+  .wtp-csel-nav.pref {
+    left: 0;
+  }
+  .wtp-csel-nav.next {
+    right: 0;
+  }
+}
